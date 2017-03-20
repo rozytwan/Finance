@@ -247,7 +247,7 @@
     </div>
 
 
-    @*For EMI calculator*@
+
     <script type="text/javascript">
         $(document).ready(function () {
             $("#btnCalc").click(function (e) {
@@ -326,13 +326,13 @@
                     dataType: "json",
                     data: dataToSend,
                     success: function (msg) {
-                        alert("success" + msg.d);
-                        window.location.href = msg.d;
+                       
+                        window.location.href = "/Home/viewTable";
 
                     },
                     error: function (msg) {
-                        alert(msg.d);
-                        window.location.href = msg.d;
+                       
+                        window.location.href = "/Home/viewTable";
                     }
                 });
 

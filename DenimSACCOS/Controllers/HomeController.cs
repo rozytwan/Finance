@@ -38,7 +38,7 @@ using DenimSACCOS.Models;
 
             return View();
         }
-        public ActionResult Product()
+        public ActionResult Services()
         {
             ViewBag.Message = "Your contact page.";
 
@@ -50,16 +50,37 @@ using DenimSACCOS.Models;
 
             return View();
         }
+        public ActionResult Saving()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+        public ActionResult Loan()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+        public ActionResult Remittance()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
         public ActionResult Gallery()
         {
             ViewBag.Message = "Your contact page.";
 
             return View();
         }
+        
         public ActionResult Downloads()
         {
             var dir = new System.IO.DirectoryInfo(Server.MapPath("~/Files/"));
-            System.IO.FileInfo[] fileNames = dir.GetFiles("*.*"); List<string> items = new List<string>();
+            System.IO.FileInfo[] fileNames = dir.GetFiles("*.*");
+            List<string> items = new List<string>();
             foreach (var file in fileNames)
             {
                 items.Add(file.Name);
@@ -71,6 +92,8 @@ using DenimSACCOS.Models;
             var FileVirtualPath = "~/Files/" + ImageName;
             return File(FileVirtualPath, "application/force-download", Path.GetFileName(FileVirtualPath));
         }
+
+
 
         static string tablehtml = "";
   [WebMethod]
